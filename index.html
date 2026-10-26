@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دعوة زفاف | Wedding Invitation</title>
+<meta name="description" content="دعوة زفاف رقمية — Digital wedding invitation">
+<meta name="theme-color" content="#FFF9F2">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&family=Great+Vibes&family=Reem+Kufi:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/badge.css">
+<noscript><style>#gate{display:none!important}#site{display:block!important;opacity:1!important}</style></noscript>
+</head>
+<body class="is-gate">
+
+<a class="skip" href="#home" data-i18n="skip">تخطي إلى المحتوى</a>
+
+<!-- ====================== البوابة / THE GATE ====================== -->
+<div id="gate" class="gate" role="region" aria-label="Invitation">
+  <div class="gate-sky" aria-hidden="true"></div>
+  <div class="gate-trees" aria-hidden="true"></div>
+  <div class="gate-lights" id="gateLights" aria-hidden="true"></div>
+  <div class="gate-sun" aria-hidden="true"></div>
+
+  <div class="gate-stage" id="gateStage">
+    <!-- ما خلف البوابة -->
+    <div class="gate-view" aria-hidden="true">
+      <div class="view-glow"></div>
+      <div class="view-path"></div>
+      <div class="view-arch"></div>
+    </div>
+
+    <div class="gate-doors" id="gateDoors">
+      <div class="door door-l"><div class="door-bars"></div></div>
+      <div class="door door-r"><div class="door-bars"></div></div>
+    </div>
+
+    <svg class="gate-flowers" id="gateFlowers" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid meet" aria-hidden="true"></svg>
+
+    <!-- لوحة الأسماء -->
+    <div class="plaque" id="plaque">
+      <span class="plaque-corner tl"></span><span class="plaque-corner tr"></span>
+      <span class="plaque-corner bl"></span><span class="plaque-corner br"></span>
+      <div class="plaque-names">
+        <span class="n-bride" data-name="bride"></span>
+        <span class="amp">&amp;</span>
+        <span class="n-groom" data-name="groom"></span>
+      </div>
+      <div class="plaque-line"></div>
+      <p class="plaque-invite" data-i18n="gateInvite"></p>
+      <p class="plaque-date" data-wedding-date></p>
+    </div>
+  </div>
+
+  <svg class="gate-fore" id="gateFore" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <button type="button" class="gate-open" id="gateOpen" data-i18n-aria="gateAria" aria-label="افتحوا بوابة الدعوة">
+    <span class="go-1" data-i18n="gatePrompt1"></span>
+    <span class="go-2" data-i18n="gatePrompt2"></span>
+    <svg class="go-arrow" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 4v14M6 12l6 7 6-7" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <button type="button" class="gate-lang" id="gateLang" hidden></button>
+  <div class="gate-flash" aria-hidden="true"></div>
+</div>
+
+<!-- ====================== الموقع / THE SITE ====================== -->
+<div id="site" class="site" hidden>
+
+  <header class="nav" id="nav">
+    <a class="monogram" href="#home" aria-label="Home"><span data-initial="bride">B</span><i>&amp;</i><span data-initial="groom">G</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#home" data-i18n="nav.home"></a>
+      <a href="#story" data-i18n="nav.story"></a>
+      <a href="#details" data-i18n="nav.wedding"></a>
+      <a href="#gallery" data-i18n="nav.gallery"></a>
+      <a href="#rsvp" data-i18n="nav.rsvp"></a>
+    </nav>
+    <div class="nav-tools">
+      <button type="button" class="lang-btn" id="langBtn" hidden></button>
+      <button type="button" class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav" data-i18n-aria="menuOpen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <nav aria-label="Mobile">
+      <a href="#home" data-i18n="nav.home"></a>
+      <a href="#story" data-i18n="nav.story"></a>
+      <a href="#details" data-i18n="nav.wedding"></a>
+      <a href="#gallery" data-i18n="nav.gallery"></a>
+      <a href="#rsvp" data-i18n="nav.rsvp"></a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- 1. HERO -->
+    <section class="hero" id="home">
+      <div class="hero-bg" id="heroBg" aria-hidden="true"></div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <div class="hero-in reveal">
+        <div id="greeting" class="greeting" hidden></div>
+        <p class="eyebrow" data-i18n="heroLabel"></p>
+        <h1 class="names">
+          <span class="n-bride" data-name="bride"></span>
+          <span class="amp">&amp;</span>
+          <span class="n-groom" data-name="groom"></span>
+        </h1>
+        <p class="hero-date" data-wedding-date></p>
+        <p class="hero-line" data-i18n="heroLine"></p>
+        <div class="btn-row">
+          <a class="btn btn-solid" href="#details" data-i18n="btnDetails"></a>
+          <button type="button" class="btn btn-ghost" id="saveDate" data-i18n="btnSave"></button>
+        </div>
+        <p class="hint" id="saveHint" role="status" hidden></p>
+      </div>
+      <a class="scroll-ind" href="#invitation" data-i18n-aria="scroll" aria-label="Scroll"><span></span></a>
+    </section>
+
+    <!-- 2. بطاقة الدعوة -->
+    <section class="paper invitation" id="invitation">
+      <div class="orn orn-tl" data-ornament></div><div class="orn orn-br" data-ornament></div>
+      <div class="card reveal">
+        <p class="small-caps" data-i18n="together"></p>
+        <div class="divider" data-divider></div>
+        <p class="names names-sm">
+          <span class="n-bride" data-name="bride"></span>
+          <span class="amp">&amp;</span>
+          <span class="n-groom" data-name="groom"></span>
+        </p>
+        <div class="divider" data-divider></div>
+        <p class="request" data-i18n="request"></p>
+        <p class="big-date" data-big-date></p>
+        <p class="venue-line"><strong data-venue-name></strong><br><span data-venue-city></span></p>
+      </div>
+    </section>
+
+    <!-- 3. الثنائي -->
+    <section class="paper couple" id="couple">
+      <div class="wrap">
+        <h2 class="title reveal" data-i18n="coupleTitle"></h2>
+        <div class="divider" data-divider></div>
+        <p class="lead reveal" data-i18n="coupleText"></p>
+        <div class="portraits">
+          <figure class="portrait reveal" id="brideFig"></figure>
+          <figure class="portrait reveal" id="groomFig"></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. العد التنازلي -->
+    <section class="champagne countdown" id="countdown">
+      <div class="orn orn-tr" data-ornament></div><div class="orn orn-bl" data-ornament></div>
+      <div class="wrap center">
+        <div class="divider" data-divider></div>
+        <h2 class="title reveal" data-i18n="cdTitle"></h2>
+        <div class="cd reveal" id="cd" role="timer" aria-live="off">
+          <div class="cd-u"><b id="cdD">--</b><span data-i18n="cdUnits.days"></span></div>
+          <i class="cd-sep">:</i>
+          <div class="cd-u"><b id="cdH">--</b><span data-i18n="cdUnits.hours"></span></div>
+          <i class="cd-sep">:</i>
+          <div class="cd-u"><b id="cdM">--</b><span data-i18n="cdUnits.minutes"></span></div>
+          <i class="cd-sep">:</i>
+          <div class="cd-u"><b id="cdS">--</b><span data-i18n="cdUnits.seconds"></span></div>
+        </div>
+        <p class="cd-msg" id="cdMsg" role="status"></p>
+        <div class="divider" data-divider></div>
+      </div>
+    </section>
+
+    <!-- 5. القصة -->
+    <section class="paper story" id="story">
+      <div class="wrap">
+        <h2 class="title reveal" data-i18n="storyTitle"></h2>
+        <div class="divider" data-divider></div>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- 6. التفاصيل -->
+    <section class="sage details" id="details">
+      <div class="wrap">
+        <h2 class="title reveal" data-i18n="detailsTitle"></h2>
+        <div class="divider light" data-divider></div>
+        <div class="cards" id="detailCards"></div>
+      </div>
+    </section>
+
+    <!-- 7. المكان والخريطة -->
+    <section class="paper venue" id="venue">
+      <div class="wrap venue-grid">
+        <div class="venue-img reveal" id="venueImg">
+          <img id="venueImgTag" alt="" hidden loading="lazy">
+          <div class="venue-ph" id="venuePh" aria-hidden="true"></div>
+        </div>
+        <div class="venue-info reveal">
+          <p class="eyebrow dark" data-i18n="venueTitle"></p>
+          <h2 class="title left" data-venue-name></h2>
+          <p class="venue-addr"><span data-venue-address></span><br><span data-venue-city></span></p>
+          <p class="venue-desc" id="venueDesc"></p>
+          <a class="btn btn-solid" id="dirBtn" href="#" target="_blank" rel="noopener noreferrer" data-i18n="directions"></a>
+          <p class="hint" id="dirHint" hidden></p>
+        </div>
+      </div>
+      <div class="wrap"><div class="map reveal" id="mapBox" hidden></div></div>
+    </section>
+
+    <!-- 8. اللباس -->
+    <section class="champagne dress" id="dress" hidden>
+      <div class="wrap center">
+        <h2 class="title reveal" data-i18n="dressTitle"></h2>
+        <div class="divider" data-divider></div>
+        <p class="lead reveal" data-i18n="dressText"></p>
+        <p class="dress-main reveal" id="dressMain"></p>
+        <dl class="dress-list reveal" id="dressList"></dl>
+      </div>
+    </section>
+
+    <!-- 9. المعرض -->
+    <section class="paper gallery" id="gallery">
+      <div class="wrap">
+        <h2 class="title reveal" data-i18n="galleryTitle"></h2>
+        <div class="divider" data-divider></div>
+        <div class="grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- 10. RSVP -->
+    <section class="blush rsvp" id="rsvp">
+      <div class="wrap narrow">
+        <h2 class="title reveal" data-i18n="rsvpTitle"></h2>
+        <div class="divider" data-divider></div>
+        <p class="lead reveal" data-i18n="rsvpIntro"></p>
+        <form class="rsvp-card reveal" id="rsvpForm" novalidate>
+          <p class="demo-note" id="demoNote" hidden></p>
+          <div class="field">
+            <label for="rName" data-i18n="f.name"></label>
+            <input id="rName" name="name" type="text" autocomplete="name" maxlength="80" required>
+            <p class="err" id="eName" role="alert"></p>
+          </div>
+          <fieldset class="field">
+            <legend data-i18n="f.attendance"></legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="attendance" value="accept"><span data-i18n="f.accept"></span></label>
+              <label class="choice"><input type="radio" name="attendance" value="decline"><span data-i18n="f.decline"></span></label>
+            </div>
+            <p class="err" id="eAtt" role="alert"></p>
+          </fieldset>
+          <div class="field" id="guestsField">
+            <label for="rGuests" data-i18n="f.guests"></label>
+            <input id="rGuests" name="guests" type="number" inputmode="numeric" min="1" max="6" value="1">
+            <p class="err" id="eGuests" role="alert"></p>
+          </div>
+          <div class="field">
+            <label for="rMsg" data-i18n="f.message"></label>
+            <textarea id="rMsg" name="message" rows="3" maxlength="500"></textarea>
+          </div>
+          <div class="field" id="dietField">
+            <label for="rDiet" data-i18n="f.diet"></label>
+            <input id="rDiet" name="dietary" type="text" maxlength="160">
+          </div>
+          <div class="field" id="contactField" hidden>
+            <label for="rContact" data-i18n="f.contact"></label>
+            <input id="rContact" name="contact" type="text" maxlength="120" autocomplete="tel">
+          </div>
+          <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit" class="btn btn-solid wide" id="rSubmit" data-i18n="f.submit"></button>
+          <p class="err form-err" id="eForm" role="alert"></p>
+        </form>
+        <div class="rsvp-done" id="rsvpDone" role="status" hidden>
+          <h3 id="doneTitle"></h3><p id="doneText"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. الختام -->
+    <section class="closing" id="thanks">
+      <div class="closing-bg" id="closingBg" aria-hidden="true"></div>
+      <div class="closing-in reveal">
+        <p class="names">
+          <span class="n-bride" data-name="bride"></span>
+          <span class="amp">&amp;</span>
+          <span class="n-groom" data-name="groom"></span>
+        </p>
+        <h2 class="title light" data-i18n="thanksTitle"></h2>
+        <p class="lead light" data-i18n="thanksText"></p>
+        <p class="big-date light" data-big-date></p>
+        <div class="divider light" data-divider></div>
+        <p class="sign"><span data-i18n="withLove"></span><br>
+          <span class="sig-names"><span data-name="bride"></span> &amp; <span data-name="groom"></span></span></p>
+      </div>
+    </section>
+  </main>
+
+  <button type="button" class="to-top" id="toTop" aria-label="Top" hidden>
+    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 19V5M6 11l6-7 6 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <div class="music" id="music" hidden>
+    <button type="button" class="music-btn" id="musicBtn" aria-pressed="false">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path class="ic-play" d="M8 5v14l11-7z" fill="currentColor"/><path class="ic-pause" d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg>
+      <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+    <input type="range" id="musicVol" min="0" max="1" step="0.05" value="0.6">
+    <audio id="audio" preload="none" loop></audio>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/badge.js" defer></script>
+<script src="js/art.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>
